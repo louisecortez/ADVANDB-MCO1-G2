@@ -5,6 +5,17 @@ public class Publisher {
 	private String address;
 	private String phoneNum;
 	
+	public Publisher() {
+		super();
+	}
+
+	public Publisher(String publisherName, String address, String phoneNum) {
+		super();
+		this.publisherName = publisherName;
+		this.address = address;
+		this.phoneNum = phoneNum;
+	}
+
 	public String getPublisherName() {
 		return publisherName;
 	}

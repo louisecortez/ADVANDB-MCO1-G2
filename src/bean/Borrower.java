@@ -7,6 +7,19 @@ public class Borrower {
 	private String address;
 	private String phoneNum;
 	
+	public Borrower() {
+		super();
+	}
+
+	public Borrower(int cardNo, String lastName, String firstName, String address, String phoneNum) {
+		super();
+		this.cardNo = cardNo;
+		this.lastName = lastName;
+		this.firstName = firstName;
+		this.address = address;
+		this.phoneNum = phoneNum;
+	}
+
 	public int getCardNo() {
 		return cardNo;
 	}

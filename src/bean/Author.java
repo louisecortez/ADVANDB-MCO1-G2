@@ -5,6 +5,17 @@ public class Author {
 	private String lastName;
 	private String firstName;
 	
+	public Author() {
+		super();
+	}
+
+	public Author(int bookID, String lastName, String firstName) {
+		super();
+		this.bookID = bookID;
+		this.lastName = lastName;
+		this.firstName = firstName;
+	}
+
 	public int getBookID() {
 		return bookID;
 	}
