@@ -1,0 +1,38 @@
+SET @@profiling = 0;
+
+SET @@profiling_history_size = 0;
+
+SET @@profiling_history_size = 100;
+
+SET @@profiling = 1;
+
+
+SELECT count(*) 'nBooksLate' 
+FROM book_loans
+ WHERE date(DueDate) < date(DateReturned) AND [condition1];
+
+
+SELECT count(*) 'nBooksLate' 
+FROM (SELECT *
+ FROM book_loans
+ WHERE date(DueDate) < date(DateReturned) AND [condition1]
+) loan;
+
+
+SELECT count(*) 'nBooksLate' 
+FROM (
+SELECT *
+ FROM book_loans
+ WHERE [condition1]
+) loan WHERE date(DueDate) < date(DateReturned);
+
+
+SELECT count(*) 'nBooksLate'
+ FROM (
+SELECT *
+ FROM book_loans
+ WHERE date(DueDate) < date(DateReturned)
+) loan WHERE [condition1];
+
+
+SHOW PROFILES;
