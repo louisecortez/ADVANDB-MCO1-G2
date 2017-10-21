@@ -11,7 +11,7 @@ SELECT id, MAX(nLoan)
 FROM (
 SELECT BranchID 'id', COUNT(BranchID) 'nLoan'
  FROM book_loans
- WHERE year(DateOut) = '2015'
+ WHERE [condition1]
  GROUP BY BranchID
 ) loan;
 
@@ -19,7 +19,7 @@ SELECT BranchID 'id', COUNT(BranchID) 'nLoan'
 SELECT id, MAX(nLoan)
  FROM (SELECT BranchID 'id', COUNT(BranchID) 'nLoan'
  FROM book_loans
- WHERE year(DateOut) = '2015'
+ WHERE [condition1]
  GROUP BY BranchID
 ) loan;
 
@@ -29,7 +29,7 @@ FROM (SELECT BranchID 'id', COUNT(BranchID) 'nLoan'
  FROM (
 SELECT *
  FROM book_loans
- WHERE year(DateOut) = '2015'
+ WHERE [condition1]
 ) dateloan
  GROUP BY BranchID
 ) loan;
