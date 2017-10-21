@@ -87,6 +87,7 @@ a {
 .setdd {
 	width:100px;
 	margin-left:10px;
+	margin-right:10px;
 }
 
 .filter-btn {
@@ -176,6 +177,10 @@ a {
     justify-content:center;
     font-family:'Raleway', sans-serif;
     font-size:15px;
+}
+
+.datepicker {
+	width:150px;
 }
 
 th {
