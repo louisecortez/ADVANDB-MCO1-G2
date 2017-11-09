@@ -172,11 +172,11 @@ a {
 }
 
 .results-table {
-	width:50%;
-	display:inline;
+	width:100%;
     justify-content:center;
     font-family:'Raleway', sans-serif;
     font-size:15px;
+    table-layout:fixed;
 }
 
 .datepicker {

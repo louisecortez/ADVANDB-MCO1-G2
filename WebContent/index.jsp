@@ -28,13 +28,13 @@
                 <div class="emphasis-text">Query:&nbsp;&nbsp;</div>
                 <select name="query" class="drop-down" id="dropfilter">
                     <option value="0">1 Table - Overdue Books</option>
-                    <option value="1">1 Table - Best Performing Branch Per Year</option>
-                    <option value="2">2 Tables - Overall Top Borrowers Per Month</option>
+                    <option value="1">1 Table - Best Performing Branch of the Year</option>
+                    <option value="2">2 Tables - Overall Top Borrowers Per Year</option>
                     <option value="3">2 Tables - Borrower Return Rate</option>
                     <option value="4">3 Tables - Top Borrowers Per Branch</option>
                     <option value="5">3 Tables - Most Borrowed Book Per Branch</option>
-                    <option value="6">4 Tables - Top Publishers Per Branch</option>
-                    <option value="7">4 Tables - Average of</option>
+                    <option value="6">4 Tables - Same Library and Publisher Addresses Books</option>
+                    <option value="7">4 Tables - Borrowed Books Per Borrower</option>
                 </select>
 
                 <div class="header-label"><p id="usingword">using</p></div>
@@ -218,7 +218,7 @@
                     $('#droptimeopt').hide();
                     $('#dropdateb').hide();
                     $('#dropyear').hide();
-                    $("#desc-id").text("The tables used for this query are book, book_loans, library_branch and publisher. Generates which publisher has the most number of borrowed books in each branch for a certain year. For this query, the data could be used by publishers to assess which libraries they would allot a higher number of quantity of their books. This could also be used for statistical analysis.");
+                    $("#desc-id").text("The tables used for this query are book, book_loans, library_branch and publisher. Generate all the books that were borrowed more than the input number in which the publisher has the same address with the library branch.");
                 } else if(this.value == '7'){
                     $("#settingsword").text("No Settings Allowed For Query.")
                     $("#dropopt").show();
@@ -226,7 +226,7 @@
                     $('#droptimeopt').hide();
                     $('#dropdateb').hide();
                     $('#dropyear').hide();
-                    $("#desc-id").text("Average of");
+                    $("#desc-id").text("The tables used for this query are book, book_loans, library_branch and library_branch. Find borrowed books per borrower per branch that is borrowed not only once. Generate all the books that are borrowed by a borrower for more than once in a given branch. This query will be particularly for borrower statistics and records.");
                 }
             });
         })
